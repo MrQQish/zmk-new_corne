@@ -1,8 +1,8 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -53,7 +53,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        QWERTY {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
@@ -64,12 +64,11 @@
             //                                                      enter
 
             bindings = <
-&lt 1 TAB              &kp Q  &kp W  &kp E  &kp R             &kp T         &kp UP_ARROW   &kp Y        &kp U  &kp I         &kp O   &kp P     &trans
-&mt LEFT_SHIFT ESCAPE  &kp A  &kp S  &kp D  &kp F             &kp G         &kp DOWN_ARROW &kp H        &kp J  &kp K         &kp L   &kp SEMI  &kp RCTRL
-&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X  &kp C  &kp V             &kp B         &kp LEFT_ARROW &kp N        &kp M  &trans        &trans  &trans    &trans
-                                  &kp C_MUTE   &mo 2  &kp LEFT_CONTROL  &lt 2 SPACE   &kp RIGHT_ARROW &lt 2 SPACE  &mo 3  &lt 4 C_MENU
-                                                             &kp ENTER
-
+&lt 1 TAB              &kp Q  &kp W       &kp E  &kp R             &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I         &kp O   &kp P     &trans
+&mt LEFT_SHIFT ESCAPE  &kp A  &kp S       &kp D  &kp F             &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K         &kp L   &kp SEMI  &kp RCTRL
+&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X       &kp C  &kp V             &kp B          &kp LEFT_ARROW   &kp N        &kp M  &trans        &trans  &trans    &trans
+                              &kp C_MUTE  &mo 2  &kp LEFT_CONTROL  &lt 2 SPACE    &kp RIGHT_ARROW  &lt 2 SPACE  &mo 3  &lt 4 C_MENU
+                                                                                  &kp ENTER
             >;
 
             label = "QWERTY";
@@ -86,26 +85,24 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&out OUT_BLE  &bl BL_TOG       &bl BL_DEC      &bl BL_DEC    &trans        &bootloader       &trans &trans           &trans           &trans           &trans           &trans  &bootloader
-&out OUT_TOG  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &trans &trans           &trans           &trans           &trans           &trans  &sys_reset
-&out OUT_USB  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &bl BL_TOG    &trans        &rgb_ug RGB_EFF   &trans &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI &rgb_ug RGB_BRD  &trans  &trans
-                                      &kp C_MUTE         &trans        &trans        &trans    &trans         &trans           &trans           &trans
-&trans
+&out OUT_BLE  &bl BL_TOG       &bl BL_DEC      &bl BL_DEC    &trans        &bootloader        &trans  &trans           &trans           &trans           &trans           &trans  &bootloader
+&out OUT_TOG  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans  &trans           &trans           &trans           &trans           &trans  &sys_reset
+&out OUT_USB  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &bl BL_TOG    &trans        &rgb_ug RGB_EFF    &trans  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans  &trans
+                               &kp C_MUTE      &trans        &trans        &trans             &trans  &trans           &trans           &trans
+                                                                                              &trans
             >;
-
 
             label = "BOARD";
             sensor-bindings = <&scroll_encoder>;
         };
 
-
         SYMBOL {
             bindings = <
-&trans  &trans       &trans      &kp SQT   &kp SLASH     &kp MINUS      &trans &kp EQUAL      &kp NON_US_BACKSLASH  &kp GRAVE  &trans      &trans       &trans
-&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)  &trans  &kp LS(RPAR)   &kp LS(RBRC)          &kp RBKT   &kp LS(GT)  &kp LS(DQT)  &trans
-&trans  &trans       &trans      &trans    &kp COMMA     &kp SEMI      &trans  &kp DOT        &trans                &trans     &trans      &trans       &trans
-                             &trans    &trans    &trans        &kp DEL      &trans   &kp BACKSPACE  &trans                &trans
-&trans
+&trans  &trans       &trans      &kp SQT   &kp SLASH     &kp MINUS       &trans  &kp EQUAL      &kp NON_US_BACKSLASH  &kp GRAVE  &trans      &trans       &trans
+&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)    &trans  &kp LS(RPAR)   &kp LS(RBRC)          &kp RBKT   &kp LS(GT)  &kp LS(DQT)  &trans
+&trans  &trans       &trans      &trans    &kp COMMA     &kp SEMI        &trans  &kp DOT        &trans                &trans     &trans      &trans       &trans
+                     &trans      &trans    &trans        &kp DEL         &trans  &kp BACKSPACE  &trans                &trans
+                                                                         &trans
             >;
 
             label = "SYMBOL";
@@ -114,11 +111,11 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans  &trans  &trans  &kp HOME        &kp PG_DN  &kp PG_UP     &kp END  &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans &trans   &trans  &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp UP   &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans  &trans  &trans  &trans          &trans     &trans        &trans   &trans
-                  &trans      &trans  &trans   &trans &trans   &trans  &trans          &trans
-&trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans  &trans  &kp HOME        &kp PG_DN  &kp PG_UP     &kp END  &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &trans  &kp LEFT_ARROW  &kp DOWN   &kp UP_ARROW  &kp UP   &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans    &trans  &trans  &trans          &trans     &trans        &trans   &trans
+                &trans  &trans  &trans   &trans    &trans  &trans  &trans          &trans
+                                                   &trans
             >;
 
             label = "FN";
@@ -127,16 +124,14 @@
 
         NUMBER {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans   &trans &trans   &kp N7  &kp N8  &kp N9  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DOT  &kp N4  &kp N5  &kp N6  &kp N0  &kp ENTER
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans   &trans  &trans
-&trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOT  &kp N4  &kp N5  &kp N6  &kp N0  &kp ENTER
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp N1  &kp N2  &kp N3  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans
             >;
 
             label = "NUMBER";
             sensor-bindings = <&scroll_encoder>;
         };
-
     };
 };
