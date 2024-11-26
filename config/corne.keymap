@@ -1,5 +1,6 @@
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -84,39 +85,41 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5             &trans     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &trans     &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF    &trans     &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                         &kp C_MUTE      &trans        &trans        &trans             &trans     &kp INS          &kp DEL          &trans
-                                                                                        &trans
+&bootloader  &bl BL_TOG       &bl BL_INC      &bl BL_DEC       &trans        &trans             &trans  &trans                          &trans                          &trans                            &trans                             &trans  &bootloader
+&trans       &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3       &trans  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(0,95,41)  &rgb_ug RGB_COLOR_HSB(37,100,50)  &rgb_ug RGB_COLOR_HSB(274,100,50)  &trans  &trans
+&trans       &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_TOG  &trans        &rgb_ug RGB_EFF    &trans  &rgb_ug RGB_EFR                 &rgb_ug RGB_SPI                 &rgb_ug RGB_BRI                   &rgb_ug RGB_BRD                    &trans  &trans
+                              &trans          &trans           &trans        &trans             &trans  &trans                          &trans                          &trans
+                                                                                                &trans
             >;
 
             label = "BOARD";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&rgb_encoder>;
         };
 
         SYMBOL {
             bindings = <
-&trans  &trans       &trans      &kp SQT   &kp FSLH      &kp MINUS       &trans  &kp EQUAL     &kp BSLH      &kp GRAVE  &trans      &trans       &trans
-&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)    &trans  &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT   &kp LS(GT)  &kp LS(DQT)  &trans
-&trans  &trans       &trans      &trans    &kp COMMA     &kp SEMI        &trans  &kp DOT       &trans        &trans     &trans      &trans       &trans
-                     &trans      &trans    &trans        &kp DEL         &trans  &kp BSPC      &trans        &trans
+&trans  &trans       &trans      &kp SQT   &kp FSLH      &kp MINUS       &trans     &kp EQUAL     &kp BSLH      &kp GRAVE  &trans      &trans       &trans
+&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)    &trans     &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT   &kp LS(GT)  &kp LS(DQT)  &trans
+&trans  &trans       &trans      &trans    &kp COMMA     &kp SEMI        &trans     &kp DOT       &trans        &trans     &trans      &trans       &trans
+                     &trans      &trans    &trans        &kp DEL         &trans     &kp BSPC      &trans        &trans
                                                                          &mkp RCLK
             >;
 
             label = "SYMBOL";
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREVIOUS>;
         };
 
         FUNCTION {
             bindings = <
-&trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans  &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans    &trans  &trans  &trans    &trans     &trans     &trans     &trans
-                &trans  &trans  &trans   &trans    &trans  &trans  &trans    &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans     &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans     &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans    &trans     &trans  &trans    &trans     &trans     &trans     &trans
+                &trans  &trans  &trans   &trans    &trans     &trans  &trans    &trans
                                                    &mkp MCLK
             >;
 
             label = "FN";
+            sensor-bindings = <&scroll_encoder>;
         };
 
         NUMBER {
@@ -129,6 +132,7 @@
             >;
 
             label = "NUMBER";
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 };
