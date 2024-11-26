@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -53,7 +52,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        QWERTY {
             display-name = "QWERTY";
 
             // --------------------------------------------------------------------------------
@@ -64,19 +63,19 @@
             //                                                      enter
 
             bindings = <
-&lt 1 ESCAPE           &kp Q  &kp W       &kp E  &kp R             &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I         &kp O   &kp P     &trans
-&mt LEFT_SHIFT TAB     &kp A  &kp S       &kp D  &kp F             &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K         &kp L   &kp SEMI  &kp RCTRL
-&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X       &kp C  &kp V             &kp B          &kp LEFT_ARROW   &kp N        &kp M  &trans        &trans  &trans    &trans
-                              &kp C_MUTE  &mo 2  &kp LEFT_CONTROL  &lt 2 SPACE    &kp RIGHT_ARROW  &lt 2 SPACE  &mo 3  &lt 4 C_MENU
-                                                                                  &kp ENTER
+&lt 2 ESCAPE           &kp Q  &kp W        &kp E  &kp R             &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I         &kp O   &kp P     &trans
+&mt LEFT_SHIFT TAB     &kp A  &kp S        &kp D  &kp F             &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K         &kp L   &kp SEMI  &kp RCTRL
+&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X        &kp C  &kp V             &kp B          &kp LEFT_ARROW   &kp N        &kp M  &trans        &trans  &trans    &trans
+                              &kp C_PAUSE  &mo 3  &kp LEFT_CONTROL  &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 SPACE  &mo 3  &lt 4 C_MENU
+                                                                                   &mkp LCLK
             >;
 
             label = "QWERTY";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        BOARD {
+            display-name = "BOARD";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
@@ -92,43 +91,44 @@
                                                                                         &mkp LCLK
             >;
 
-            label = "NUMBER";
+            label = "BOARD";
             sensor-bindings = <&scroll_encoder>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        SYMBOL {
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4     &mmv MOVE_DOWN   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5     &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                      &trans        &trans     &trans     &kp SPACE    &mmv MOVE_RIGHT  &kp RET    &trans     &trans
-                                                                       &mkp LCLK
+&trans  &trans       &trans      &kp SQT   &kp FSLH      &kp MINUS       &trans  &kp EQUAL     &kp BSLH      &kp GRAVE  &trans      &trans       &trans
+&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT  &kp LS(LBRC)  &kp LS(LPAR)    &trans  &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT   &kp LS(GT)  &kp LS(DQT)  &trans
+&trans  &trans       &trans      &trans    &kp COMMA     &kp SEMI        &trans  &kp DOT       &trans        &trans     &trans      &trans       &trans
+                     &trans      &trans    &trans        &kp DEL         &trans  &kp BSPC      &trans        &trans
+                                                                         &trans
             >;
 
             label = "SYMBOL";
-            sensor-bindings = <&scroll_encoder>;
         };
 
-        layer_3 {
-            display-name = "Fn";
+        FUNCTION {
             bindings = <
-&trans  &kp F1      &kp F2      &kp F3       &kp F4     &kp F5      &mmv MOVE_UP     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans  &trans      &mkp LCLK   &mkp MCLK    &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans  &sys_reset  &trans      &bootloader  &trans     &mkp MB5    &mmv MOVE_LEFT   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                    &kp C_MUTE  &trans       &trans     &trans      &mmv MOVE_RIGHT  &trans       &trans     &trans
-                                                                    &mkp LCLK
+&trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans  &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
+&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans  &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans    &trans  &trans  &trans    &trans     &trans     &trans     &trans
+                &trans  &trans  &trans   &trans    &trans  &trans  &trans    &trans
+                                                   &trans
             >;
 
             label = "FN";
-            sensor-bindings = <&scroll_encoder>;
+        };
+
+        NUMBER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans   &kp N7  &kp N8  &kp N9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOT  &kp N4  &kp N5  &kp N6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp N0   &kp N1  &kp N2  &kp N3  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans  &trans   &trans  &trans
+                                                  &trans
+            >;
+
+            label = "NUMBER";
         };
     };
 };
