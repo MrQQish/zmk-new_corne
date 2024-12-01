@@ -64,11 +64,11 @@
             //                                                      enter
 
             bindings = <
-&lt 4 ESCAPE           &kp Q  &kp W             &kp F  &kp P             &trans         &mmv MOVE_UP     &trans       &kp J  &kp L         &kp U  &kp Y  &trans
-&mt LEFT_SHIFT TAB     &kp A  &kp R             &kp S  &kp T             &kp D          &mmv MOVE_DOWN   &kp G        &kp E  &kp I         &kp O  &kp N  &kp RCTRL
-&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X             &kp C  &kp V             &trans         &mmv MOVE_LEFT   &trans       &kp K  &kp M         &kp H  &kp B  &trans
-                              &kp C_PLAY_PAUSE  &mo 1  &kp LEFT_CONTROL  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 1 SPACE  &mo 2  &lt 0 C_MENU
-                                                                                        &mkp LCLK
+&trans                 &kp Q  &kp W             &kp F                        &kp P                    &trans         &mmv MOVE_UP     &trans     &kp J                &kp L             &kp U  &kp Y  &trans
+&trans                 &kp A  &kp R             &kp S                        &kp T                    &kp D          &mmv MOVE_DOWN   &kp G      &kp E                &kp I             &kp O  &kp N  &trans
+&mt LEFT_ALT LEFT_GUI  &kp Z  &kp X             &kp C                        &kp V                    &trans         &mmv MOVE_LEFT   &trans     &kp K                &kp M             &kp H  &kp B  &trans
+                              &kp C_PLAY_PAUSE  &mt LEFT_WIN K_CONTEXT_MENU  &mt LEFT_CONTROL ESCAPE  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 2 RET  &mt RIGHT_SHIFT TAB  &lt 3 RA(C_MENU)
+                                                                                                                     &mkp LCLK
             >;
 
             label = "QWERTY";
@@ -80,7 +80,7 @@
 &trans  &trans       &kp SQT     &kp FSLH   &kp MINUS     &trans          &trans     &trans        &kp EQUAL     &kp BSLH       &kp GRAVE   &trans       &trans
 &trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT   &kp LS(LBRC)  &kp LS(LPAR)    &trans     &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT       &kp LS(GT)  &kp LS(DQT)  &trans
 &trans  &trans       &kp COLON   &kp COMMA  &kp SEMI      &trans          &trans     &trans        &kp DOT       &kp LS(UNDER)  &trans      &trans       &trans
-                     &trans      &trans     &trans        &kp DEL         &trans     &kp BSPC      &trans        &trans
+                     &trans      &trans     &trans        &trans          &trans     &mo 3         &trans        &trans
                                                                           &mkp RCLK
             >;
 
