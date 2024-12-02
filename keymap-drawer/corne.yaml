@@ -21,11 +21,11 @@ layers:
   - T
   - V
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - G
-  - N
+  - B
   - E
   - I
   - O
+  - N
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:apple-keyboard-command$$', h: '$$mdi:apple-keyboard-option$$'}
   - Z
@@ -38,7 +38,7 @@ layers:
   - H
   - M
   - K
-  - B
+  - G
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
   - LEFT WIN
