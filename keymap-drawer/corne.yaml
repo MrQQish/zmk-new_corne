@@ -2,9 +2,9 @@ layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   QWERTY:
   - {t: '$$mdi:keyboard-esc$$', h: BOARD}
+  - Q
   - W
   - F
-  - P
   - P
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
