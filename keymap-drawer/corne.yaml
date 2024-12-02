@@ -21,7 +21,7 @@ layers:
   - T
   - V
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - K
+  - G
   - N
   - E
   - I
@@ -37,7 +37,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - H
   - M
-  - G
+  - K
   - B
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
