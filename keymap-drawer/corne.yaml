@@ -19,9 +19,9 @@ layers:
   - R
   - S
   - T
-  - D
+  - V
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - H
+  - K
   - N
   - E
   - I
@@ -31,11 +31,11 @@ layers:
   - Z
   - X
   - C
-  - V
+  - D
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - K
+  - H
   - M
   - G
   - B
