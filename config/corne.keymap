@@ -79,7 +79,7 @@
             bindings = <
 &trans  &trans       &kp SQT     &kp FSLH   &kp MINUS     &trans          &trans     &trans        &kp EQUAL     &kp BSLH       &kp GRAVE   &trans       &trans
 &trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT   &kp LS(LBRC)  &kp LS(LPAR)    &trans     &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT       &kp LS(GT)  &kp LS(DQT)  &trans
-&trans  &trans       &kp COLON   &kp COMMA  &kp SEMI      &trans          &trans     &trans        &kp DOT       &kp LS(UNDER)  &trans      &trans       &trans
+&trans  &trans       &kp COLON   &kp COMMA  &kp SEMI      &trans          &trans     &trans        &kp DOT       &kp LS(UNDER)  &kp COLON   &trans       &trans
                      &trans      &trans     &kp LCTRL     &kp DEL         &trans     &kp BSPC      &kp RCTRL     &trans
                                                                           &mkp RCLK
             >;
