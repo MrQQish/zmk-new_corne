@@ -53,7 +53,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        TISM {
+        AUTISM {
             display-name = "TISM";
 
             // --------------------------------------------------------------------------------
