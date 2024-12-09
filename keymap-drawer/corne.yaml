@@ -9,10 +9,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - J
+  - Y
   - L
   - U
-  - Y
+  - B
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - A
@@ -21,7 +21,7 @@ layers:
   - T
   - V
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - B
+  - J
   - E
   - I
   - O
@@ -37,8 +37,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - H
   - M
-  - K
   - G
+  - K
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
   - LEFT WIN
