@@ -83,11 +83,11 @@
             //                                                      enter
 
             bindings = <
-&lt 4 ESCAPE        &kp Q             &kp W               &kp F           &kp P    &trans         &mmv MOVE_UP     &trans       &kp Y    &kp L              &kp U               &kp B             &trans
-&mt LEFT_SHIFT TAB  &hm LEFT_SHIFT A  &hm LEFT_CONTROL R  &hm LEFT_ALT S  &kp T    &kp V          &mmv MOVE_DOWN   &kp J        &kp E    &hm LEFT_ALT I     &hm LEFT_CONTROL O  &hm LEFT_SHIFT N  &mt RCTRL RET
-&trans              &kp Z             &kp X               &kp C           &kp D    &trans         &mmv MOVE_LEFT   &trans       &kp H    &kp M              &kp G               &kp K             &trans
-                                      &kp C_PLAY_PAUSE    &kp LEFT_GUI    &kp TAB  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 1 SPACE  &kp RET  &kp K_APPLICATION
-                                                                                                  &mkp LCLK
+&trans  &kp Q             &kp W               &kp F           &kp P    &mo 4          &mmv MOVE_UP     &mo 4        &kp B    &kp L              &kp U               &kp Y             &trans
+&trans  &hm LEFT_SHIFT A  &hm LEFT_CONTROL R  &hm LEFT_ALT S  &kp T    &kp V          &mmv MOVE_DOWN   &kp J        &kp E    &hm LEFT_ALT I     &hm LEFT_CONTROL O  &hm LEFT_SHIFT N  &trans
+&trans  &kp Z             &kp X               &kp C           &kp D    &trans         &mmv MOVE_LEFT   &trans       &kp H    &kp M              &kp K               &kp G             &trans
+                          &kp C_PLAY_PAUSE    &kp LEFT_GUI    &kp TAB  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 1 SPACE  &kp RET  &kp K_APPLICATION
+                                                                                      &mkp LCLK
             >;
 
             label = "QWERTY";
@@ -96,11 +96,11 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans                  &kp SQT                  &kp FSLH           &kp MINUS     &trans            &trans     &trans             &kp EQUAL        &kp BSLH           &kp GRAVE                &trans                  &trans
-&trans  &hm LEFT_SHIFT LS(LT)  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LS(LBRC)  &kp LS(LPAR)  &kp LS(DQT)      &trans     &kp LS(DQT)       &kp LS(RPAR)     &hm LEFT_ALT LS(RBRC)  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
-&trans  &trans                  &kp COLON                &kp COMMA          &kp SEMI      &trans            &trans     &trans             &kp DOT          &kp LS(UNDER)      &kp COLON                &trans                  &trans
-                                &trans                   &trans             &lt 3 DEL     &kp LC(DELETE)    &trans     &kp LC(BACKSPACE)  &lt 2 BACKSPACE  &trans
-                                                                                                            &mkp RCLK
+&trans  &trans                 &kp SQT                &kp FSLH               &kp MINUS     &trans            &trans     &trans             &kp EQUAL        &kp BSLH               &kp GRAVE              &trans                 &trans
+&trans  &hm LEFT_SHIFT LS(LT)  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LS(LBRC)  &kp LS(LPAR)  &kp LS(DQT)       &trans     &kp LS(DQT)        &kp LS(RPAR)     &hm LEFT_ALT LS(RBRC)  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
+&trans  &trans                 &kp COLON              &kp COMMA              &kp SEMI      &trans            &trans     &trans             &kp DOT          &kp LS(UNDER)          &kp COLON              &trans                 &trans
+                               &trans                 &trans                 &lt 3 DEL     &kp LC(DELETE)    &trans     &kp LC(BACKSPACE)  &lt 2 BACKSPACE  &trans
+                                                                                                             &mkp RCLK
             >;
 
             label = "SYMBOL";
