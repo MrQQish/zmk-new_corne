@@ -84,8 +84,8 @@
 
             bindings = <
 &lt 4 ESCAPE        &kp Q             &kp W               &kp F           &kp P    &trans         &mmv MOVE_UP     &trans       &kp Y    &kp L              &kp U               &kp B             &trans
-&mt LEFT_SHIFT TAB  &kp A             &kp R               &kp S           &kp T    &kp V          &mmv MOVE_DOWN   &kp J        &kp E    &kp I              &kp O               &kp N             &mt RCTRL RET
-&trans              &hm LEFT_SHIFT Z  &hm LEFT_CONTROL X  &hm LEFT_ALT C  &kp D    &trans         &mmv MOVE_LEFT   &trans       &kp H    &hm LEFT_ALT M     &hm LEFT_CONTROL G  &hm LEFT_SHIFT K  &trans
+&mt LEFT_SHIFT TAB  &hm LEFT_SHIFT A             &hm LEFT_CONTROL  R               &hm LEFT_ALT S           &kp T    &kp V          &mmv MOVE_DOWN   &kp J        &kp E    &hm LEFT_ALT I              &hm LEFT_CONTROL  O               &hm LEFT_SHIFT N             &mt RCTRL RET
+&trans             &kp Z  &kp X  &kp C  &kp D    &trans         &mmv MOVE_LEFT   &trans       &kp H     &kp  M     &kp G  &kp K  &trans
                                       &kp C_PLAY_PAUSE    &kp LEFT_GUI    &kp TAB  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 1 SPACE  &kp RET  &kp K_APPLICATION
                                                                                                   &mkp LCLK
             >;
@@ -97,7 +97,7 @@
         SYMBOL {
             bindings = <
 &trans  &trans       &kp SQT     &kp FSLH   &kp MINUS     &trans          &trans     &trans           &kp EQUAL        &kp BSLH       &kp GRAVE   &trans       &trans
-&trans  &kp LS(DQT)  &kp LS(LT)  &kp LBKT   &kp LS(LBRC)  &kp LS(LPAR)    &trans     &kp LS(RPAR)     &kp LS(RBRC)     &kp RBKT       &kp LS(GT)  &kp LS(DQT)  &trans
+&trans  &hm LEFT_SHIFT  LS(DQT)   &hm LEFT_CONTROL LS(LT)  &hm LEFT_ALT LBKT   &kp LS(LBRC)  &kp LS(LPAR)    &trans     &kp LS(RPAR)     &kp LS(RBRC)     &hm LEFT_ALT RBKT       &hm LEFT_CONTROL  LS(GT)  &hm LEFT_SHIFT LS(DQT)  &trans
 &trans  &trans       &kp COLON   &kp COMMA  &kp SEMI      &trans          &trans     &trans           &kp DOT          &kp LS(UNDER)  &kp COLON   &trans       &trans
                      &trans      &trans     &lt 3 DEL     &lt 3 DEL       &trans     &lt 2 BACKSPACE  &lt 2 BACKSPACE  &trans
                                                                           &mkp RCLK
@@ -110,7 +110,7 @@
         FUNCTION {
             bindings = <
 &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans     &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
-&trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans    &trans     &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
+&trans  &hm LEFT_SHIFT &hm LEFT_CONTROL F4  &hm LEFT_ALT F5  &kp F6  &kp F11  &trans    &trans     &trans  &kp LEFT  &hm LEFT_ALT DOWN   &hm LEFT_CONTROL &kp UP     &hm LEFT_SHIFT  RIGHT  &trans
 &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans    &trans     &trans  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans
                 &trans  &trans  &trans   &trans    &trans     &trans  &trans    &trans
                                                    &mkp MCLK
@@ -123,7 +123,7 @@
         NUMBER {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SPACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none   &kp N4  &kp N5  &kp N6  &kp N0     &trans
+&trans  &hm LEFT_SHIFT &hm LEFT_CONTROL &hm LEFT_ALT &trans  &trans  &trans  &trans  &trans    &trans  &none   &kp N4  &kp N5  &kp N6  &kp N0     &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &kp DOT    &trans
                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
                                                   &trans
