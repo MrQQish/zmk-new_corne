@@ -96,11 +96,11 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans                 &kp SQT                &kp FSLH               &kp MINUS     &trans            &trans     &trans             &kp EQUAL        &kp BSLH               &kp GRAVE              &trans                 &trans
-&trans  &hm LEFT_SHIFT LS(LT)  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LS(LBRC)  &kp LS(LPAR)  &kp LS(DQT)       &trans     &kp LS(DQT)        &kp LS(RPAR)     &hm LEFT_ALT LS(RBRC)  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
-&trans  &trans                 &kp COLON              &kp COMMA              &kp SEMI      &trans            &trans     &trans             &kp DOT          &kp LS(UNDER)          &kp COLON              &trans                 &trans
-                               &trans                 &trans                 &lt 3 DEL     &kp LC(DELETE)    &trans     &kp LC(BACKSPACE)  &lt 2 BACKSPACE  &trans
-                                                                                                             &mkp RCLK
+&trans  &trans                 &kp SQT                &kp FSLH               &kp MINUS     &trans          &trans     &trans           &kp EQUAL     &kp BSLH               &kp GRAVE              &trans                 &trans
+&trans  &hm LEFT_SHIFT LS(LT)  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LS(LBRC)  &kp LS(LPAR)  &kp LS(DQT)     &trans     &kp LS(DQT)      &kp LS(RPAR)  &hm LEFT_ALT LS(RBRC)  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
+&trans  &trans                 &kp COLON              &kp COMMA              &kp SEMI      &trans          &trans     &trans           &kp DOT       &kp LS(UNDER)          &kp COLON              &trans                 &trans
+                               &trans                 &trans                 &trans        &lt 3 DELETE    &trans     &lt 2 BACKSPACE  &trans        &trans
+                                                                                                           &mkp RCLK
             >;
 
             label = "SYMBOL";
