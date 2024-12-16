@@ -153,5 +153,15 @@
             label = "BOARD";
             sensor-bindings = <&rgb_encoder>;
         };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                                                  &trans
+            >;
+        };
     };
 };
