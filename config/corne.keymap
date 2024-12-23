@@ -5,6 +5,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2400  // 600
@@ -42,6 +45,22 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+        };
+
+        vq: vq {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VQ";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp Q>;
+
+            tapping-term-ms = <200>;
+        };
+
+        kj: kj {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KJ";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp J>;
         };
     };
 
@@ -83,10 +102,10 @@
             //                                                      enter
 
             bindings = <
-&trans  &kp Q             &kp W               &kp F           &kp P      &mo 4          &mmv MOVE_UP     &tog 5       &kp B    &kp L              &kp U               &kp Y             &trans
-&trans  &hm LEFT_SHIFT A  &hm LEFT_CONTROL R  &hm LEFT_ALT S  &kp T      &kp V          &mmv MOVE_DOWN   &kp J        &kp E    &hm LEFT_ALT I     &hm LEFT_CONTROL O  &hm LEFT_SHIFT N  &trans
-&trans  &kp Z             &kp X               &kp C           &kp D      &trans         &mmv MOVE_LEFT   &trans       &kp H    &kp M              &kp K               &kp G             &trans
-                          &kp C_PLAY_PAUSE    &kp LEFT_GUI    &lt 5 TAB  &lt 1 SPACE    &mmv MOVE_RIGHT  &lt 1 SPACE  &kp RET  &kp K_APPLICATION
+&trans  &vq               &kp W               &kp F           &kp P      &trans         &mmv MOVE_UP     &trans       &kp B         &kp L              &kp U               &kj               &trans
+&trans  &hm LEFT_SHIFT A  &hm LEFT_CONTROL R  &hm LEFT_ALT S  &kp T      &trans         &mmv MOVE_DOWN   &trans       &kp E         &hm LEFT_ALT I     &hm LEFT_CONTROL O  &hm LEFT_SHIFT N  &trans
+&trans  &kp Z             &kp X               &kp C           &kp D      &trans         &mmv MOVE_LEFT   &trans       &kp H         &kp M              &kp Y               &kp G             &trans
+                          &kp C_PLAY_PAUSE    &kp LEFT_GUI    &lt 5 TAB  &lt 3 SPACE    &mmv MOVE_RIGHT  &lt 2 SPACE  &lt 4 RETURN  &kp K_APPLICATION
                                                                                         &mkp LCLK
             >;
 
@@ -96,11 +115,11 @@
 
         SYMBOL {
             bindings = <
-&trans  &trans                 &kp SQT                &kp FSLH               &kp MINUS     &trans          &trans     &trans           &kp EQUAL     &kp BSLH               &kp GRAVE              &trans                 &trans
-&trans  &hm LEFT_SHIFT LS(LT)  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LS(LBRC)  &kp LS(LPAR)  &kp LS(DQT)     &trans     &kp LS(DQT)      &kp LS(RPAR)  &hm LEFT_ALT LS(RBRC)  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
-&trans  &trans                 &kp COLON              &kp COMMA              &kp SEMI      &trans          &trans     &trans           &kp DOT       &kp LS(UNDER)          &kp COLON              &trans                 &trans
-                               &trans                 &trans                 &trans        &lt 3 DELETE    &trans     &lt 2 BACKSPACE  &trans        &trans
-                                                                                                           &mkp RCLK
+&trans  &kp DOUBLE_QUOTES         &kp SQT                &kp FSLH                 &kp MINUS             &trans    &trans     &trans  &kp EQUAL     &kp BSLH                  &kp GRAVE              &kp DOUBLE_QUOTES      &trans
+&trans  &hm LEFT_SHIFT LESS_THAN  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp LS(RPAR)  &hm LEFT_ALT RIGHT_BRACE  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
+&trans  &trans                    &kp COLON              &kp COMMA                &kp SEMI              &trans    &trans     &trans  &kp DOT       &kp UNDER                 &kp COLON              &trans                 &trans
+                                  &trans                 &trans                   &trans                &trans    &trans     &trans  &trans        &trans
+                                                                                                                  &mkp RCLK
             >;
 
             label = "SYMBOL";
@@ -109,11 +128,11 @@
 
         FUNCTION {
             bindings = <
-&trans  &kp F7             &kp F8               &kp F9           &kp F12  &trans    &trans     &trans  &kp HOME  &kp PG_DN          &kp PG_UP            &kp END               &trans
-&trans  &hm LEFT_SHIFT F4  &hm LEFT_CONTROL F5  &hm LEFT_ALT F6  &kp F11  &trans    &trans     &trans  &kp LEFT  &hm LEFT_ALT DOWN  &hm LEFT_CONTROL UP  &hm LEFT_SHIFT RIGHT  &trans
-&trans  &kp F1             &kp F2               &kp F3           &kp F10  &trans    &trans     &trans  &kp HOME  &kp PG_DN          &kp PG_UP            &kp END               &trans
-                           &trans               &trans           &trans   &trans    &trans     &trans  &trans    &trans
-                                                                                    &mkp MCLK
+&trans  &kp F7             &kp F8               &kp F9           &kp F12  &trans          &trans     &trans  &kp HOME  &kp PG_DN          &kp PG_UP            &kp END               &trans
+&trans  &hm LEFT_SHIFT F4  &hm LEFT_CONTROL F5  &hm LEFT_ALT F6  &kp F11  &trans          &trans     &trans  &kp LEFT  &hm LEFT_ALT DOWN  &hm LEFT_CONTROL UP  &hm LEFT_SHIFT RIGHT  &trans
+&trans  &kp F1             &kp F2               &kp F3           &kp F10  &trans          &trans     &trans  &kp HOME  &kp PG_DN          &kp PG_UP            &kp END               &trans
+                           &trans               &trans           &trans   &lt 1 DELETE    &trans     &trans  &trans    &trans
+                                                                                          &mkp MCLK
             >;
 
             label = "FN";
@@ -122,10 +141,10 @@
 
         NUMBER {
             bindings = <
-&trans  &trans          &trans            &trans        &trans  &trans    &trans  &trans  &kp N7  &kp N8  &kp N9  &kp SPACE  &trans
-&trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans    &trans  &none   &kp N4  &kp N5  &kp N6  &kp N0     &trans
-&trans  &trans          &trans            &trans        &trans  &trans    &trans  &trans  &kp N1  &kp N2  &kp N3  &kp DOT    &trans
-                        &trans            &trans        &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &trans          &trans            &trans        &trans  &trans    &trans  &trans           &kp N7  &kp N8  &kp N9  &kp SPACE  &trans
+&trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &trans  &trans    &trans  &none            &kp N4  &kp N5  &kp N6  &kp N0     &trans
+&trans  &trans          &trans            &trans        &trans  &trans    &trans  &trans           &kp N1  &kp N2  &kp N3  &kp DOT    &trans
+                        &trans            &trans        &trans  &trans    &trans  &lt 1 BACKSPACE  &trans  &trans
                                                                           &trans
             >;
 
@@ -145,7 +164,7 @@
             bindings = <
 &bootloader   &bl BL_TOG       &bl BL_INC      &bl BL_DEC       &trans        &soft_off          &trans  &soft_off                       &trans                          &trans                            &trans                             &trans  &bootloader
 &out OUT_TOG  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3       &trans  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_COLOR_HSB(0,95,41)  &rgb_ug RGB_COLOR_HSB(37,100,50)  &rgb_ug RGB_COLOR_HSB(274,100,50)  &trans  &trans
-&trans        &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_TOG  &trans        &rgb_ug RGB_EFF    &trans  &rgb_ug RGB_EFR                 &rgb_ug RGB_SPI                 &rgb_ug RGB_BRI                   &rgb_ug RGB_BRD                    &trans  &trans
+&trans        &rgb_ug RGB_TOG  &rgb_ug RGB_ON  &rgb_ug RGB_TOG  &trans        &rgb_ug RGB_EFF    &trans  &rgb_ug RGB_EFR                 &rgb_ug RGB_SPI                 &rgb_ug RGB_BRI                   &rgb_ug RGB_BRD                    &trans  &trans
                                &trans          &trans           &trans        &trans             &trans  &trans                          &trans                          &trans
                                                                                                  &trans
             >;
