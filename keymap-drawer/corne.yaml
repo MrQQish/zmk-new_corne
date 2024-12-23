@@ -71,10 +71,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+)
+  - )
   - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
   - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
-  - {t: Sft+>, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '>', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
