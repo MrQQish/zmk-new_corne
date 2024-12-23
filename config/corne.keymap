@@ -113,7 +113,7 @@
         SYMBOL {
             bindings = <
 &trans  &kp DOUBLE_QUOTES         &kp SQT                &kp FSLH                 &kp MINUS             &trans    &trans     &trans  &kp EQUAL              &kp BSLH                  &kp GRAVE              &kp DOUBLE_QUOTES            &trans
-&trans  &kp LESS_THAN  &kp LBKT  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp GREATER_THAN  &trans
+&trans  &hm LEFT_SHIFT LBKT  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN &hm LEFT_SHIFT RBKT   &trans
 &trans  &trans                    &kp COLON              &kp COMMA                &kp SEMI              &trans    &trans     &trans  &kp DOT                &kp UNDER                 &kp COLON              &trans                       &trans
                                   &trans                 &trans                   &trans                &trans    &trans     &trans  &trans                 &trans
                                                                                                                   &mkp RCLK
