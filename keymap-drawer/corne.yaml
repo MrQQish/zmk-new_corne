@@ -64,8 +64,8 @@ layers:
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '[', h: '$$mdi:apple-keyboard-shift$$', s: '{'}
   - <
-  - {t: '[', s: '{'}
   - '{'
   - (
   - {t: '$$mdi:transfer$$', type: trans}
@@ -73,8 +73,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - )
   - '}'
-  - {t: ']', s: '}'}
   - '>'
+  - {t: ']', h: '$$mdi:apple-keyboard-shift$$', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
