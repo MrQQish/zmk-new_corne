@@ -5,6 +5,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2400  // 600
@@ -112,10 +115,10 @@
 
         SYMBOL {
             bindings = <
-&trans  &kp DOUBLE_QUOTES         &kp SQT                &kp FSLH                 &kp MINUS             &trans    &trans     &trans  &kp EQUAL     &kp BSLH                  &kp GRAVE              &kp DOUBLE_QUOTES      &trans
-&trans  &hm LEFT_SHIFT LESS_THAN  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp LS(RPAR)  &hm LEFT_ALT RIGHT_BRACE  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
-&trans  &trans                    &kp COLON              &kp COMMA                &kp SEMI              &trans    &trans     &trans  &kp DOT       &kp UNDER                 &kp COLON              &trans                 &trans
-                                  &trans                 &trans                   &trans                &trans    &trans     &trans  &trans        &trans
+&trans  &kp DOUBLE_QUOTES         &kp SQT                &kp FSLH                 &kp MINUS             &trans    &trans     &trans  &kp EQUAL              &kp BSLH                  &kp GRAVE              &kp DOUBLE_QUOTES            &trans
+&trans  &mt LEFT_SHIFT LESS_THAN  &mt LEFT_CONTROL LBKT  &mt LEFT_ALT LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp RIGHT_PARENTHESIS  &mt LEFT_ALT RIGHT_BRACE  &mt LEFT_CONTROL RBKT  &mt LEFT_SHIFT GREATER_THAN  &trans
+&trans  &trans                    &kp COLON              &kp COMMA                &kp SEMI              &trans    &trans     &trans  &kp DOT                &kp UNDER                 &kp COLON              &trans                       &trans
+                                  &trans                 &trans                   &trans                &trans    &trans     &trans  &trans                 &trans
                                                                                                                   &mkp RCLK
             >;
 
@@ -168,6 +171,15 @@
 
             label = "BOARD";
             sensor-bindings = <&rgb_encoder>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        thumb {
+            if-layers = <3 2>;
+            then-layer = <1>;
         };
     };
 };
