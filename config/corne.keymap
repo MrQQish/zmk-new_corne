@@ -171,12 +171,4 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        thumb {
-            if-layers = <3 2>;
-            then-layer = <1>;
-        };
-    };
 };
