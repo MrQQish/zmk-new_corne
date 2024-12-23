@@ -64,17 +64,17 @@ layers:
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: <, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
-  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
+  - <
+  - {t: '[', s: '{'}
+  - '{'
   - (
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - )
-  - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
-  - {t: '>', h: '$$mdi:apple-keyboard-shift$$'}
+  - '}'
+  - {t: ']', s: '}'}
+  - '>'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
