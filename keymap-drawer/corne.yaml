@@ -65,16 +65,16 @@ layers:
   - {t: AUTISM, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
-  - S
-  - D
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - F
   - G
   - {t: '$$mdi:transfer$$', type: trans}
   - G
   - H
-  - J
-  - K
-  - L
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
@@ -113,17 +113,17 @@ layers:
   - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', h: '$$mdi:apple-keyboard-shift$$', s: '{'}
-  - <
-  - '{'
+  - {t: <, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '[', h: '$$mdi:apple-keyboard-control$$', s: '{'}
+  - {t: '{', h: '$$mdi:apple-keyboard-option$$'}
   - (
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - )
-  - '}'
-  - '>'
-  - {t: ']', h: '$$mdi:apple-keyboard-shift$$', s: '}'}
+  - Sft+)
+  - {t: '}', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-control$$', s: '}'}
+  - {t: Sft+>, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
