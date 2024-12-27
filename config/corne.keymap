@@ -5,9 +5,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2400  // 600
@@ -116,7 +113,7 @@
         QWERTY {
             bindings = <
 &trans  &kp Q             &kp W   &kp E   &kp R   &kp T     &trans  &kp T   &kp Y   &kp U   &kp I  &kp O   &to 0
-&trans  &hm LEFT_SHIFT A  &kp S   &kp D   &kp F   &kp G     &trans  &kp G   &kp H   &kp J   &kp K  &kp L   &trans
+&trans  &hm LEFT_SHIFT A  &hm LEFT_CONTROL S    &hm LEFT_ALT D   &kp F   &kp G     &trans  &kp G   &kp H    &hm LEFT_ALT J   &hm LEFT_CONTROL K  &hm LEFT_SHIFT L   &trans
 &trans  &kp Z             &kp X   &kp C   &kp V   &kp B     &trans  &kp B   &kp N   &kp M   &kp P  &trans  &trans
                           &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
                                                             &trans
@@ -128,7 +125,7 @@
         SYMBOL {
             bindings = <
 &trans  &kp DOUBLE_QUOTES    &kp SQT        &kp FSLH        &kp MINUS             &trans    &trans     &trans  &kp EQUAL              &kp BSLH         &kp GRAVE         &kp DOUBLE_QUOTES    &trans
-&trans  &hm LEFT_SHIFT LBKT  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &hm LEFT_SHIFT RBKT  &trans
+&trans  &hm LEFT_SHIFT LESS_THAN  &hm LEFT_CONTROL LBKT  &hm LEFT_ALT LEFT_BRACE  &kp LEFT_PARENTHESIS  &trans    &trans     &trans  &kp LS(RPAR)  &hm LEFT_ALT RIGHT_BRACE  &hm LEFT_CONTROL RBKT  &hm LEFT_SHIFT LS(GT)  &trans
 &trans  &trans               &kp COLON      &kp COMMA       &kp SEMI              &trans    &trans     &trans  &kp DOT                &kp UNDER        &kp COLON         &trans               &trans
                              &trans         &trans          &trans                &trans    &trans     &trans  &trans                 &trans
                                                                                             &mkp RCLK
