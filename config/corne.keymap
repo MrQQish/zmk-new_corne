@@ -188,7 +188,7 @@
 
         test {
             if-layers = <3 2>;
-            then-layer = <2>;
+            then-layer = <4>;
         };
     };
 };
