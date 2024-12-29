@@ -12,7 +12,7 @@ layers:
   - B
   - L
   - U
-  - '&kj'
+  - Y
   - {t: QWERTY, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: A, h: '$$mdi:apple-keyboard-shift$$'}
@@ -37,7 +37,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - H
   - M
-  - Y
+  - '&kj'
   - G
   - {t: '$$mdi:transfer$$', type: trans}
   - PLAY PAUSE
